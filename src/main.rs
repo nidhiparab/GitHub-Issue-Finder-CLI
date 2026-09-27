@@ -15,7 +15,7 @@ struct Resp{
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
-    let req_url = "https://api.github.com/search/issues?q=label:good-first-issue+state:open";
+    let req_url = "https://api.github.com/search/issues?q=label:good-first-issue+state:open+language:Rust";
 
     let response = client
     .get(req_url)
